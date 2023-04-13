@@ -2,20 +2,13 @@
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
-let assetPrefix = ''
-let basePath = '/'
-
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
-
-  assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
-}
+let assetPrefix = isGithubActions ? '/' : ''
+let basePath = ''
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: "/",
-  basePath: "",
+  assetPrefix: assetPrefix,
+  basePath: basePath,
   experimental: {
     appDir: true,
   },

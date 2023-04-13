@@ -28,6 +28,7 @@ export const data: Resume = {
         { name: "JavaScript", category: "frontend", years: 8 },
         { name: "React.js", category: "frontend", years: 5 },
         { name: "Angular", category: "frontend", years: 5 },
+        { name: "React Native", category: "mobile", years: 5 },
         { name: "Azure DevOps", category: "devops", years: 5 },
         { name: "Firebase", category: "devops", years: 2 },
         { name: "Docker", category: "devops", years: 5 },
@@ -116,52 +117,3 @@ processes and data processing.`
         }
     ]
 }
-
-type Contact = {
-  phone: string;
-  email: string;
-  linkedin: string;
-  github: string;
-};
-
-type Education = {
-  course: string;
-  school: string;
-  startYear: string;
-  endYear: string;
-};
-
-type Skill = {
-  name: string;
-  category: "backend" | "frontend" | "mobile" | "devops" | "cloud" | "concepts" | "agile";
-  years: number;
-};
-
-type Language = {
-  name: string;
-  level: "native" | "beginner" | "intermediate" | "advanced" | "fluent";
-};
-
-type Experience = {
-  title: string;
-  company: string;
-  startPeriod: string;
-  endPeriod: string;
-  isCurrent?: boolean;
-  details: (string | string[])[];
-};
-
-type Resume = {
-  name: string;
-  details: {
-    birthdate: string;
-    local: string;
-    country: string;
-    contact: Contact;
-  };
-  education: Education[];
-  skills: Skill[];
-  languages: Language[];
-  summary: string;
-  experience: Experience[];
-};
