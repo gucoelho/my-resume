@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { data } from '../api/hello/data'
-import { SectionTitle } from '../components/SectionTitle'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +30,6 @@ export default function Old() {
       <div className='flex gap-6 min-h-screen sm:flex-row'>
         <aside className='flex flex-col text-right'>
           <section>
-            <SectionTitle>Details</SectionTitle>
             <p className='text-base'>{calculateAge()}, {data.details.local}, {data.details.country} </p>
 
             <br />
