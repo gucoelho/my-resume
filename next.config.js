@@ -14,7 +14,7 @@ if (isGithubActions) {
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: "/my-resume/",
+  assetPrefix: "/",
   basePath: "",
   experimental: {
     appDir: true,
