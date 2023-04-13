@@ -2,7 +2,6 @@
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
-console.log("isGithubActions", isGithubActions)
 let assetPrefix = ''
 
 if (isGithubActions) {
@@ -10,8 +9,6 @@ if (isGithubActions) {
 
   assetPrefix = `/${repo}/`
 }
-
-console.log("assetPrefix", assetPrefix)
 
 const nextConfig = {
   output: 'export',
